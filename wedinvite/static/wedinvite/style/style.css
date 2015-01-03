@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Allura';
+  src: url('Allura-Regular.otf');
+}
+
+.countdown {
+  font-family: 'Allura';
+  font-size: 60px;
+  font-size: 6vw;
+  text-align: center;
+}
+
+html body {
+  background: #FFFFB5;
+}
+
+.container {
+  background: white;
+  border: 1px #e4e4e4 solid;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #ccc;
+  background-color: #fff;
+  margin-top: 10px;
+}
