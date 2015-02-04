@@ -24,7 +24,10 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.laurairjonas.lt', # Allow domain and subdomains
+    '.laurairjonas.lt.',
+]
 
 
 TEMPLATE_DIRS = (
