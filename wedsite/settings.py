@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '_3!k_y-3ym+r0jk@$!)c4aed-=5=$_5@+ntw&34u#4kktc=@c9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
     '.laurairjonas.lt', # Allow domain and subdomains
@@ -89,4 +89,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/jonas/Projects/wedsite/static/'
+STATIC_ROOT = '/home/jonas/wedsite/static/'
+
+try:
+    from prod_settings import *
+except ImportError as e:
+    pass
