@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display|Josefin+Sans|Playball&subset=latin,latin-ext);
+
 @font-face {
   font-family: 'Allura';
   src: url('Allura-Regular.otf');
@@ -11,7 +13,7 @@
 }
 
 html body {
-  background: #FFFFB5;
+  background: #FFFFDA;
 }
 
 .container {
@@ -23,3 +25,11 @@ html body {
   background-color: #fff;
   margin-top: 10px;
 }
+
+.headline1 { font-family: 'Allura'; font-size: 30px; font-size= 6vw; text-align: center; }
+
+.headline2 { color: #a7e8f8; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34; }
+
+.text_content { font-family: 'Josefin Sans'; font-size: 16px; line-height: 24px; margin: 0 0 24px; }
+
+a:hover { color: #a7e8f8; text-decoration: underline; }
