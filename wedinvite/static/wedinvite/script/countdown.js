@@ -9,7 +9,7 @@ function updateClock() {
   var current_date = new Date().getTime();
   var seconds_left = (target_date - current_date) / 1000;
   days = parseInt(seconds_left / 86400);
-  seconds_left = seconds_left % 86400;
+  seconds_left = seconds_left - (days * 86400);
   hours = parseInt(seconds_left / 3600);
   var daysString = getDateString("dien", days);
   var hourString = getDateString("valand", hours);
