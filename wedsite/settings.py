@@ -19,11 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_3!k_y-3ym+r0jk@$!)c4aed-=5=$_5@+ntw&34u#4kktc=@c9'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = [
     '.laurairjonas.lt', # Allow domain and subdomains
     '.laurairjonas.lt.',
@@ -71,6 +66,12 @@ DATABASES = {
     }
 }
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.request',
+  # ...
+)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -88,10 +89,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_ROOT = '/home/jonas/wedsite/static/'
 STATIC_URL = '/static/'
 
 try:
-    from prod_settings import *
+    from project.prod_settings import *
+except ImportError as e:
+    pass
+
+try:
+    from project.local_settings import *
 except ImportError as e:
     pass

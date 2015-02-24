@@ -4,6 +4,7 @@
   {% load staticfiles %}
   <link href="{% static "wedinvite/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static "wedinvite/style/style.css" %}" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="{% static "wedinvite/script/countdown.js" %}"></script>
   <link rel="shortcut icon" type="image/png" href="{% static "wedinvite/images/favicon.ico" %}"/>
   <title>Wedding</title>
@@ -30,9 +31,9 @@
       <div class="col-md-2 col-sm-2">
 	<div id="ribbon-navigation">
           <ul class="top-level">
-            <li><a href="#">Kvietimas</a></li>
-            <li><a href="#">Vieta</a></li>
-            <li><a href="#">Nuotraukos</a></li>
+            <li {% if request.path == '/wedinvite/index/' or request.path == '/' %} class="active"{% endif %}><a href="/wedinvite/index">Kvietimas</a></li>
+            <li {% if request.path == '/wedinvite/place/' %} class="active"{% endif %}><a href="/wedinvite/place">Vieta</a></li>
+            <li {% if request.path == '/wedinvite/photos/' %} class="active"{% endif %}><a href="/wedinvite/photos">Nuotraukos</a></li>
           </ul>
  	</div>
       </div>
