@@ -17,6 +17,7 @@ html body {
 }
 
 .container {
+  height: 100%;
   background: white;
   border: 1px #e4e4e4 solid;
   padding: 20px;
@@ -28,9 +29,17 @@ html body {
 
 .headline1 { font-family: 'Allura'; font-size: 30px; font-size= 6vw; text-align: center; }
 
-.headline2 { color: #a7e8f8; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34; }
+.headline2 { font-family: 'Allura'; font-size: 24px; font-size= 4vw; text-align: center; }
 
 .text_content { font-family: 'Josefin Sans'; font-size: 16px; line-height: 36px; margin: 0 0 24px; padding: 20px; text-indent: 36px;}
+
+.footer {
+  position:relative;
+  bottom: 0;
+  padding: 20px;
+  height: 100px;
+  background-color: #fff;
+}
 
 #ribbon-navigation {font-size:1.5em; width:150px; font-family: 'Allura'; margin-top:50px;}
 #ribbon-navigation ul {margin:20px; padding:10px 0; border-left:1px solid #AAA; width:200px;}

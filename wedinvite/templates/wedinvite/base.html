@@ -7,7 +7,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="{% static "wedinvite/script/countdown.js" %}"></script>
   <link rel="shortcut icon" type="image/png" href="{% static "wedinvite/images/favicon.ico" %}"/>
-  <title>Wedding</title>
+  <title>Laura ir Jonas</title>
 </head>
 <body>
   <!-- Google Tag Manager -->
@@ -21,31 +21,37 @@
   <!-- End Google Tag Manager -->
 </body>
 <body onload="updateClock()">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="countdown" class="countdown"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2 col-sm-2">
-	<div id="ribbon-navigation">
-          <ul class="top-level">
-            <li {% if request.path == '/wedinvite/index/' or request.path == '/' %} class="active"{% endif %}><a href="/wedinvite/index">Kvietimas</a></li>
-            <li {% if request.path == '/wedinvite/place/' %} class="active"{% endif %}><a href="/wedinvite/place">Vieta</a></li>
-            <li {% if request.path == '/wedinvite/photos/' %} class="active"{% endif %}><a href="/wedinvite/photos">Nuotraukos</a></li>
-          </ul>
- 	</div>
-      </div>
-      <div class="col-md-8 col-sm-8">
-        <div id="content">
-          {% block content %}{% endblock %}
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="countdown" class="countdown"></div>
         </div>
       </div>
-      <div class="col-md-2 col-sm-2">
-        <img class="img-responsive center-block" src="{% static "wedinvite/images/eiffel.png" %}">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <div id="ribbon-navigation">
+            <ul class="top-level">
+              <li {% if request.path == '/wedinvite/index/' or request.path == '/' %} class="active"{% endif %}><a href="/wedinvite/index">Kvietimas</a></li>
+              <li {% if request.path == '/wedinvite/place/' %} class="active"{% endif %}><a href="/wedinvite/place">Vieta</a></li>
+              <li {% if request.path == '/wedinvite/photos/' %} class="active"{% endif %}><a href="/wedinvite/photos">Nuotraukos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-8">
+          <div id="content">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <img class="img-responsive center-block" src="{% static "wedinvite/images/eiffel.png" %}">
+        </div>
+      </div>
+      <div class="row">
+        <img class="img-responsive center-block" width="20px" src="{% static "wedinvite/images/logo.png" %}">
       </div>
     </div>
+
   </div>
 </body>
 </html>

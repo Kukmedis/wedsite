@@ -1,11 +1,25 @@
 {% extends "wedinvite/base.html" %}
-
+{% load staticfiles %}
 {% block content %}
 <body class="text-justify">
 <h1 class="headline1"> Nuotraukos! </h1>
 <p class="text_content">
 Šventė dar neįvyko, taigi nuotraukų dar neturime :)
-<p class="text_content" align="right">Jūsų Laura ir Jonas</p>
+Tačiau turime senų nuotraukų!
 </p>
+<h2 class="headline2">2008</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2008.jpg" %}"/>
+<h2 class="headline2">2009</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2009.jpg" %}"/>
+<h2 class="headline2">2010</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2010.jpg" %}"/>
+<h2 class="headline2">2011</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2011.jpg" %}"/>
+<h2 class="headline2">2012</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2012.jpg" %}"/>
+<h2 class="headline2">2013</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2013.jpg" %}"/>
+<h2 class="headline2">2014</h2>
+<img style="margin: 20px" width="90%" class="img-responsive center-block" src="{% static "wedinvite/images/story/2014.jpg" %}"/>
 </body>
 {% endblock %}
